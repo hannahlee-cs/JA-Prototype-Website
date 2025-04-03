@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>UT Austin Japanese</title>
+</head>
+
+<body>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="styled-box-header">UT Japanese Department</div>
+        <div class="styled-box-footer-title">日本語</div>
+    </div>
+
+    <!-- Main Image -->
+    <div class="image-container">
+        <img src="https://www.bing.com/images/blob?bcid=SAAnqleJrEAIac5nNvTNhzM2nDkV.....y8" alt="UTJPNAS" class="title-image">
+    </div>
+
+    <!-- Description -->
+    <div class="styled-box-footer">UT Austin Japanese Department:</div>
+    <div class="styled-box-footer">"Devoted to sharing and appreciating Japanese culture"</div>
+
+    <!-- Image Gallery -->
+    <div class="image-container">
+        <img src="https://wallpapercave.com/wp/wp2114069.jpg" alt="UTTOWER" class="uniform-image">
+        <img src="https://th.bing.com/th/id/OIP.1idfpio8Cxc6RdP0vYJCwgAAAA?rs=1&pid=ImgDetMain" alt="JA" class="uniform-image">
+        <img src="https://www.bing.com/images/blob?bcid=SKc.s4wVo0AIac5nNvTNhzM2nDkV.....8k" alt="KIMONO" class="uniform-image">
+    </div>
+    <div class="button-container">
+        <button type="button" class="styled-button" onclick="window.location.href='{{ url_for('other_pages', page='academic') }}'">Academics</button>
+        <button type="button" class="styled-button" onclick="window.location.href='{{ url_for('other_pages', page='organization') }}'">Organizations</button>
+        <button type="button" class="styled-button" onclick="window.location.href='{{ url_for('other_pages', page='affiliations') }}'">Affiliations</button>
+    </div>
+
+    <!-- Outreach Section -->
+    <div class="outreach-container">
+        <div class="styled-box-outreach">Learn more and support!</div>
+        <form action="/submit" method="POST">
+            <input type="text" name="user_input" placeholder="Enter your email....">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="styled-box-outreach">ありがとうございました。</div>
+    </div>
+
+</body>
+</html>
